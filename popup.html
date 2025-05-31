@@ -1,156 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      width: 350px;
-      min-height: 200px;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-    }
-    
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    
-    .header h1 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
-    
-    .header .subtitle {
-      font-size: 12px;
-      opacity: 0.9;
-      margin-top: 5px;
-    }
-    
-    .content {
-      padding: 15px;
-    }
-    
-    .domain-info {
-      background: white;
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    .domain-name {
-      font-weight: 600;
-      font-size: 14px;
-      color: #333;
-    }
-    
-    .status {
-      margin-top: 8px;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-    
-    .status.clean {
-      background: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-    }
-    
-    .status.violations {
-      background: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-    }
-    
-    .status.loading {
-      background: #e2e3e5;
-      color: #6c757d;
-      border: 1px solid #d6d8db;
-    }
-    
-    .violations-list {
-      margin-top: 15px;
-    }
-    
-    .violation-item {
-      background: white;
-      border-left: 4px solid #dc3545;
-      margin-bottom: 10px;
-      padding: 12px;
-      border-radius: 0 6px 6px 0;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    
-    .violation-title {
-      font-weight: 600;
-      color: #721c24;
-      margin-bottom: 5px;
-    }
-    
-    .violation-description {
-      font-size: 12px;
-      color: #666;
-      line-height: 1.4;
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 10px;
-      font-size: 11px;
-      color: #888;
-      border-top: 1px solid #eee;
-    }
-    
-    .footer a {
-      color: #667eea;
-      text-decoration: none;
-    }
-    
-    .loading-spinner {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #f3f3f3;
-      border-top: 2px solid #667eea;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>Consumer Rights Checker</h1>
-    <div class="subtitle">Powered by Louis Rossmann's Wiki</div>
-  </div>
-  
-  <div class="content">
-    <div class="domain-info">
-      <div class="domain-name" id="domainName">Loading...</div>
-      <div class="status loading" id="status">
-        <span class="loading-spinner"></span> Checking with  Consumer Rights Wiki...
-      </div>
-    </div>
-    
-    <div class="violations-list" id="violationsList" style="display: none;"></div>
-  </div>
-  
-  <div class="footer">
-    Data by <a href="https://consumerrights.wiki" target="_blank">Consumer Rights Wiki</a>
-  </div>
-  
-  <script src="popup.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				width: 350px;
+				min-height: 200px;
+				margin: 0;
+				padding: 0;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				background: #f5f5f5;
+			}
+
+			.header {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 15px;
+				text-align: center;
+			}
+
+			.header h1 {
+				margin: 0;
+				font-size: 16px;
+				font-weight: 600;
+			}
+
+			.header .subtitle {
+				font-size: 12px;
+				opacity: 0.9;
+				margin-top: 5px;
+			}
+
+			.content {
+				padding: 15px;
+			}
+
+			.domain-info {
+				background: white;
+				border-radius: 8px;
+				padding: 12px;
+				margin-bottom: 15px;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			}
+
+			.domain-name {
+				font-weight: 600;
+				font-size: 14px;
+				color: #333;
+			}
+
+			.status {
+				margin-top: 8px;
+				padding: 8px 12px;
+				border-radius: 6px;
+				font-size: 13px;
+				font-weight: 500;
+			}
+
+			.status.clean {
+				background: #d4edda;
+				color: #155724;
+				border: 1px solid #c3e6cb;
+			}
+
+			.status.violations {
+				background: #f8d7da;
+				color: #721c24;
+				border: 1px solid #f5c6cb;
+			}
+
+			.status.loading {
+				background: #e2e3e5;
+				color: #6c757d;
+				border: 1px solid #d6d8db;
+			}
+
+			.violations-list {
+				margin-top: 15px;
+			}
+
+			.violation-item {
+				background: white;
+				border-left: 4px solid #dc3545;
+				margin-bottom: 10px;
+				padding: 12px;
+				border-radius: 0 6px 6px 0;
+				box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+			}
+
+			.violation-title {
+				font-weight: 600;
+				color: #721c24;
+				margin-bottom: 5px;
+			}
+
+			.violation-description {
+				font-size: 12px;
+				color: #666;
+				line-height: 1.4;
+			}
+
+			.footer {
+				text-align: center;
+				padding: 10px;
+				font-size: 11px;
+				color: #888;
+				border-top: 1px solid #eee;
+			}
+
+			.footer a {
+				color: #667eea;
+				text-decoration: none;
+			}
+
+			.loading-spinner {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border: 2px solid #f3f3f3;
+				border-top: 2px solid #667eea;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Consumer Rights Checker</h1>
+			<div class="subtitle">Powered by Louis Rossmann's Wiki</div>
+		</div>
+
+		<div class="content">
+			<div class="domain-info">
+				<div class="domain-name" id="domainName">Loading...</div>
+				<div class="status loading" id="status">
+					<span class="loading-spinner"></span> Checking with  Consumer Rights Wiki...
+				</div>
+			</div>
+
+			<div class="violations-list" id="violationsList" style="display: none;"></div>
+		</div>
+
+		<div class="footer">
+			Data by <a href="https://consumerrights.wiki" target="_blank">Consumer Rights Wiki</a>
+		</div>
+
+		<script src="popup.js"></script>
+	</body>
 </html>
 

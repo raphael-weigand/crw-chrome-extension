@@ -1,34 +1,34 @@
 {
-  "name": "Consumer Rights Wiki Checker",
-  "description": "When visiting a website, the URL is checked whether it has entries in the consumer-rights wiki by Louis Rossmann",
-  "version": "1.0",
-  "manifest_version": 3,
+	"name": "Consumer Rights Wiki Checker",
+	"description": "When visiting a website, the URL is checked whether it has entries in the consumer-rights wiki by Louis Rossmann",
+	"version": "1.0",
+	"manifest_version": 3,
 
-  "action": {
-    "default_popup": "popup.html",
-	"default_title":"Consumer Rights Checker",
-    "default_icon": "consumerrights.wiki.png"
-  },
+	"action": {
+		"default_popup": "popup.html",
+		"default_title":"Consumer Rights Checker",
+		"default_icon": "consumerrights.wiki.png"
+	},
 
-  "permissions": [
-	"activeTab",
-	"storage"
-  ],
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
 
-  "host_permissions": [
-    "https://*/*"
+	"host_permissions": [
+		"https://*/*"
   ],
 
   "background": {
-    "service_worker": "background.js"
+	  "service_worker": "background.js"
   },
 
   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
+	  {
+		  "matches": ["<all_urls>"],
+		  "js": ["content.js"],
+		  "run_at": "document_idle"
+	  }
   ],
 
   "icons": {
