@@ -120,7 +120,7 @@ function displayResults(data) {
 	} else {
 		// No violations found
 		statusEl.innerHTML = `
-	  <span>✅ Keine Artikel zu "${data.companyName}" gefunden</span>
+	  <span>✅ No articles found for "${data.companyName}"</span>
 	`;
 		statusEl.className = 'status clean';
 		violationsListEl.style.display = 'none';
