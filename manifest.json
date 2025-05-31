@@ -17,23 +17,23 @@
 
 	"host_permissions": [
 		"https://*/*"
-  ],
+	],
 
-  "background": {
-	  "service_worker": "background.js"
-  },
+	"background": {
+		"service_worker": "background.js"
+	},
 
-  "content_scripts": [
-	  {
-		  "matches": ["<all_urls>"],
-		  "js": ["content.js"],
-		  "run_at": "document_idle"
-	  }
-  ],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	],
 
-  "icons": {
-	  "16": "consumerrights.wiki.png",
-	  "48": "consumerrights.wiki.png",
-	  "128": "consumerrights.wiki.png"
-  }
+	"icons": {
+		"16": "consumerrights.wiki.png",
+		"48": "consumerrights.wiki.png",
+		"128": "consumerrights.wiki.png"
+	}
 }
