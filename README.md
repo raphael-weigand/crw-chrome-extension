@@ -14,7 +14,7 @@ The extension, when pinned, shows directly a red mark, with a number indicating 
 
 ## Setup Chrome Extension from this Repo
 
-The extension is not yet published to Chrome Webstore, but you can locally install it.
+The extension is not yet published to Chrome Webstore, but you can locally install it. I plan to publish it to the Chrome Webstore shortly.
 
 Download the repo in a folder. 
 Then follow this guide on how to enable local [chrome extensions](https://developer.chrome.com/docs/extensions/get-started)
