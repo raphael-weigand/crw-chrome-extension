@@ -11,3 +11,9 @@ The extension, when pinned, shows directly a red mark, with a number indicating 
 
 ![Consumer Rights Wiki shows a number of found articles for Volkswagen.de](Documentation/Images/crw-Example-VW.png)
 
+## Setup Chrome Extension from this Repo
+The extension is not yet published to Chrome Webstore, but you can locally install it.
+
+Download the repo in a folder. 
+Then follow this guide on how to enable local [chrome extensions](https://developer.chrome.com/docs/extensions/get-started)
+
