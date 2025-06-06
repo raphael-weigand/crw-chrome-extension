@@ -1,10 +1,10 @@
 {
 	"name": "Consumer Rights Wiki Checker",
-	"description": "When visiting a website, the URL is checked whether it has entries in the consumer-rights wiki by Louis Rossmann",
-	"version": "2025.6.5",
-	"manifest_version": 3,
+	"description": "Check companies for consumer rights violations using Louis Rossmann's Consumer Rights Wiki",
+	"version": "2025.6",
+	"manifest_version": 2,
 
-	"action": {
+	"browser_action": {
 		"default_popup": "popup.html",
 		"default_title":"Consumer Rights Checker",
 		"default_icon": "consumerrights.wiki.png"
@@ -12,15 +12,12 @@
 
 	"permissions": [
 		"activeTab",
-		"storage"
-	],
-
-	"host_permissions": [
+		"storage",
 		"https://*/*"
 	],
 
 	"background": {
-		"service_worker": "background.js"
+		"scripts": ["background.js"]
 	},
 
 	"content_scripts": [
@@ -35,5 +32,12 @@
 		"16": "consumerrights.wiki.png",
 		"48": "consumerrights.wiki.png",
 		"128": "consumerrights.wiki.png"
+	},
+
+	"applications": {
+		"gecko": {
+			"id": "consumer-rights@onpoint.com",
+			"strict_min_version": "58.0"
+		}
 	}
 }
