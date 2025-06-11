@@ -1,7 +1,7 @@
 {
-	"name": "Consumer Rights Wiki Checker",
+	"name": "Consumer Rights Checker",
 	"description": "When visiting a website, the URL is checked whether it has entries in the consumer-rights wiki by Louis Rossmann",
-	"version": "2025.6.5",
+	"version": "2025.6",
 	"manifest_version": 3,
 
 	"action": {
